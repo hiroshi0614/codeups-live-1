@@ -1,0 +1,47 @@
+.p-message__img {
+  width: myrem(340);
+  margin-right: auto;
+  @include mq(tab) {
+    width: myrem(420);
+  }
+}
+
+.p-message__contnet {
+  margin-top: myrem(30);
+}
+
+.p-message__text {
+  font-size: myrem(14);
+  font-weight: 400;
+  line-height: 2;
+  @include mq(tab) {
+    font-size: myrem(16);
+  }
+}
+
+.p-message__text:nth-child(n + 2) {
+  margin-top: myrem(28);
+}
+
+.p-message__wrapper {
+  padding: myrem(126) myrem(28) myrem(80);
+  background-color: #F0F0F0;
+  margin-top: myrem(-100);
+  @include mq(tab) {
+    max-width: myrem(770);
+    width: 100%;
+    margin-left: auto;
+    padding: myrem(120) myrem(185) myrem(90);
+  }
+}
+
+.p-message__inner {
+  @include mq(tab) {
+    margin: 0 auto;
+    width: 100%;
+    height: inherit;
+    max-width: $l-inner + strip-unit($padding-pc) * 2;
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+  }
+}

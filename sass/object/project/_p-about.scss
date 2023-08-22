@@ -1,0 +1,62 @@
+.p-about__inner {
+  padding-top: myrem(50);
+  padding-bottom: myrem(50);
+  max-width: 1000px;
+  padding-right: $padding-sp;
+  padding-left: $padding-sp;
+  background: url(./../img/common/top-about.jpg);
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  @include mq(tab) {
+    padding-top: myrem(110);
+    padding-bottom: myrem(110);
+    padding-left: myrem(50);
+    max-width: initial;
+  }
+}
+
+.p-about__inner::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($color: #000000, $alpha: 0.16);
+  z-index: -2;
+}
+
+.p-about__content {
+  background-color: rgba($color: #fff, $alpha: 0.95);
+  padding: myrem(50) myrem(15) myrem(50) myrem(30);
+  max-width: myrem(540);
+  margin-right: auto;
+  margin-left: auto;
+  @include mq(tab) {
+    max-width: myrem(590);
+    width: 100%;
+    margin-right: auto;
+    margin-left: initial;
+    padding: myrem(50) myrem(30);
+  }
+}
+
+.p-about__box {
+  padding-top: myrem(30);
+}
+
+.p-about__text {
+  line-height: 2;
+  font-size: myrem(14);
+  @include mq(tab) {
+    font-size: myrem(16);
+  }
+}
+
+.p-about__btn {
+  padding-top: myrem(30);
+}
+

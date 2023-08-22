@@ -1,0 +1,37 @@
+.p-topic-info {
+  padding-bottom: myrem(10);
+  border-bottom: 1px solid #ddd;
+
+  & + & {
+    margin-top: myrem(20);
+  }
+}
+
+.p-topic-info__date,
+.p-topic-info__text {
+  display: block;
+}
+
+.p-topic-info__date {
+  font-family: $font-family-sub;
+  font-size: myrem(10);
+  letter-spacing: 0.015em;
+  font-weight: 700;
+  color: #cecece;
+
+}
+
+.p-topic-info__text {
+  margin-top: myrem(10);
+  color: $text-color;
+  font-size: myrem(12);
+  font-weight: 700;
+  line-height: (20 / 12);
+  letter-spacing: 0.068em;
+  @include mq(tab) {
+    font-size: myrem(14);
+  }
+}
+
+
+

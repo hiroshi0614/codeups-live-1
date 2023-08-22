@@ -1,0 +1,31 @@
+.p-vision__inner {
+  @include mq(tab) {
+    padding-left: myrem(226);
+  }
+}
+
+.p-vision__content {
+  margin-top: myrem(37);
+}
+
+.p-vision__box {
+  margin-top: myrem(35);
+}
+
+.p-vision__subtitle {
+  font-weight: 400;
+  font-size: myrem(24);
+}
+
+.p-vision__text {
+  font-size: myrem(14);
+  font-weight: 400;
+  line-height: 2;
+  @include mq(tab) {
+    font-size: myrem(16);
+  }
+}
+
+.p-vision__text:nth-child(n + 2) {
+  margin-top: myrem(28);
+}

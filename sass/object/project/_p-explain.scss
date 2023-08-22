@@ -1,0 +1,30 @@
+
+.p-explain {
+  border-top: solid 1px #ddd;
+  @include mq(tab) {
+    padding-left: myrem(317);
+  }
+}
+
+.p-explain__block {
+  display: flex;
+  align-items: center;
+  padding: myrem(24) 0 myrem(21);
+  border-bottom: solid 1px #ddd;
+  font-size: myrem(14);
+  letter-spacing: 0.04em;
+}
+
+
+.p-explain__header {
+  width: myrem(75);
+  @include mq(tab) {
+    font-weight: bold;
+  }
+}
+
+.p-explain__description {
+  max-width: myrem(182);
+  width: 100%;
+  margin-left: myrem(83);
+}

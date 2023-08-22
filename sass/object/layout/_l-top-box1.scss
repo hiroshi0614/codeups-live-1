@@ -1,0 +1,14 @@
+.l-top-box1:nth-child(2) {
+  margin-top: myrem(40);
+  @include mq(tab) {
+    margin-top: 0;
+    margin-left: myrem(60);
+  }
+}
+
+.l-top-box1 {
+  @include mq(tab) {
+    width: 100%;
+    max-width: myrem(520);
+  }
+}

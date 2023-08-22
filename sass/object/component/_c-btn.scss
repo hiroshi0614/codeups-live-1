@@ -1,0 +1,12 @@
+.c-btn {
+  font-family: $ft-sub;
+  font-size: myrem(11);
+  letter-spacing: 0.015em;
+  line-height: 1;
+  font-weight: 500;
+  background-color: #000000;
+  padding: myrem(11) myrem(44);
+  color: #fff;
+  text-transform: uppercase;
+  display: inline-block;
+}

@@ -1,0 +1,38 @@
+.p-sub-contact {
+  font-size: myrem(14);
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+}
+
+.p-sub-contact__contents {
+  margin-top: myrem(50);
+}
+
+.p-sub-contact__content +
+.p-sub-contact__content {
+  margin-top: myrem(40);
+}
+
+.p-sub-contact__head {
+  display: flex;
+  align-items: center;
+}
+
+.p-sub-contact__title {
+  font-size: myrem(16);
+  line-height: 1;
+  letter-spacing: 0.04em;
+  font-weight: bold;
+  margin-right: myrem(10);
+}
+
+.p-sub-contact__required {
+  font-size: myrem(12);
+  padding: myrem(3) myrem(5);
+  background-color: #333;
+  color: #fff;
+}
+
+.p-sub-contact__item {
+  margin-top: myrem(20);
+}

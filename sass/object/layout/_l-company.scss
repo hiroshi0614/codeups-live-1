@@ -1,0 +1,7 @@
+.l-company {
+  margin-top: myrem(80);
+  @include mq(tab) {
+    margin-top: myrem(120);
+  }
+}
+

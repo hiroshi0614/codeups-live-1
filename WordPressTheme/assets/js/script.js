@@ -4,6 +4,57 @@ jQuery(window).on("load", function() {
 	jQuery("body").attr("data-loading", "true");
 });
 
+//ナビバートグル
+	$('.js-hamburger').on('click' , function () {
+		if ($('.js-hamburger').hasClass('open')) {
+			$('.js-drawer-menu').fadeOut();
+			$('.js-overlay').fadeOut();
+			$(this).removeClass('open');
+		} else {
+			$('.js-drawer-menu').fadeIn();
+			$('.js-overlay').fadeIn();
+			$(this).addClass('open');
+		}
+	});
+
+	$('.js-overlay').on('click', function() {
+		$('.js-drawer-menu').fadeOut();
+		$('.js-overlay').fadeOut();
+		$('.js-hamburger').removeClass('open');
+	});
+
+//ヘッダー過ぎたら背景色を付与する
+	let header = $('.js-top-header');
+  let headerHeight = $('.js-top-header').outerHeight(); //ヘッダーコンテンツ
+	let imgHeight = $('.js-mv').outerHeight() - headerHeight
+
+	$(window).on('load scroll', function () {
+		if ($(window).scrollTop() < imgHeight) {
+			//メインビジュアル内にいるので、クラスを外す
+			header.removeClass('headerColor');
+		} else {
+			//メインビジュアルより下までスクロールしたので、クラスを付けて色を変える
+			header.addClass('headerColor')
+		}
+	});
+
+//ヘッダー過ぎたら背景色を付与する
+let subheader = $('.js-sub-header');
+let headerHeightSub = $('.js-sub-header').outerHeight(); //ヘッダーコンテンツ
+let imgHeightSub = $('.js-sub-mv').outerHeight() - headerHeightSub
+
+$(window).on('load scroll', function () {
+	if ($(window).scrollTop() < imgHeightSub) {
+		//メインビジュアル内にいるので、クラスを外す
+		subheader.removeClass('headerColor');
+	} else {
+		//メインビジュアルより下までスクロールしたので、クラスを付けて色を変える
+		subheader.addClass('headerColor')
+	}
+});
+
+
+
 jQuery(function() {
 	// スクロール判定
 	jQuery(window).on("scroll", function() {
@@ -21,10 +72,11 @@ jQuery(function() {
 		jQuery("." + targetClass).toggleClass("is-checked");
 		return false;
 	});
+});
 
 	/* スムーススクロール */
 	jQuery('a[href^="#"]').click(function() {
-		let header = jQuery(".js-header").height();
+		let header = jQuery(".js-top-header").height();
 		let speed = 300;
 		let id = jQuery(this).attr("href");
 		let target = jQuery("#" == id ? "html" : id);
@@ -53,5 +105,4 @@ jQuery(function() {
 				e.preventDefault();
 			});
 	}
-});
 });

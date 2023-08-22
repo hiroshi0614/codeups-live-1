@@ -1,0 +1,17 @@
+.p-topics {
+  padding-bottom: myrem(40);
+}
+
+.p-topics__items {
+  margin-top: myrem(30);
+  @include mq(tab) {
+    max-width: myrem(700);
+    width: 100%;
+    margin-left: auto;
+  }
+}
+
+.p-topics__btn {
+  margin-top: myrem(30);
+  text-align: right;
+}

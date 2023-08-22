@@ -1,0 +1,22 @@
+.l-top-bgGray {
+  background-color: #f0f0f0;
+  padding-top: myrem(40);
+  padding-bottom: myrem(40);
+  position: relative;
+  z-index: -10;
+  @include mq(tab) {
+    padding-top: myrem(180);
+    padding-bottom: myrem(60);
+    margin-top: myrem(-100);
+  }
+}
+
+.l-top-bgGray__inner {
+  @include mq(tab) {
+    display: flex;
+    max-width: myrem(1100);
+    padding: 0 myrem(20);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,66 @@
+.p-header {
+  padding-top: myrem(20);
+  transition: ease .1s;
+}
+
+.p-header.headerColor {
+  background: #000;
+  padding-bottom: myrem(20);
+}
+
+.p-header__inner {
+  padding: 0 myrem(15);
+}
+
+.p-header__logo {
+  width: myrem(189);
+  height: auto;
+}
+
+.p-header__drawer {
+  position: absolute;
+  right: myrem(56);
+  top: myrem(25);
+}
+
+.p-header__menuText {
+  position: absolute;
+  right: myrem(15);
+  top: myrem(25);
+  font-family: $ft-sub;
+  font-weight: 880;
+  text-transform: uppercase;
+  font-size: myrem(10);
+  color: #fff;
+  z-index: 9999;
+}
+
+.p-header__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: scroll;
+  padding-bottom: 100px;
+  z-index: 999;
+    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+  -ms-overflow-style: none;
+    /*Firefoxへの対応*/
+  scrollbar-width: none;
+}
+
+.p-header__menu::-webkit-scrollbar{
+  display: none;
+}
+
+.p-header__overlay {
+  background-color: rgba($color: #222, $alpha: 0.6);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  display: none;
+}
